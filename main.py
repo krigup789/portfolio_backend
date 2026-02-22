@@ -1,10 +1,13 @@
-from fastapi import FastAPI, Depends
+from fastapi import FastAPI, Depends,HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 from database import SessionLocal, engine
 from models import Base, ChatHistory
 from resume_context import RESUME_TEXT
 from openrouter import call_openrouter
+from pydantic import BaseModel
+
+
 
 Base.metadata.create_all(bind=engine)
 
@@ -29,31 +32,43 @@ def get_db():
     finally:
         db.close()
 
+@app.get("/health")
+def health():
+    return {"status": "ok"}
 
 @app.get("/")
 def home():
     return {"message": "AI Portfolio Backend Running"}
 
+class ChatRequest(BaseModel):
+    message: str
+from fastapi import HTTPException
 
 @app.post("/chat")
-def chat(message: str, db: Session = Depends(get_db)):
+def chat(request: ChatRequest, db: Session = Depends(get_db)):
+    try:
+        full_prompt = f"""
+        Resume Context:
+        {RESUME_TEXT}
 
-    full_prompt = f"""
-    Resume Context:
-    {RESUME_TEXT}
+        User Question:
+        {request.message}
+        """
 
-    User Question:
-    {message}
-    """
+        ai_response = call_openrouter(full_prompt)
 
-    ai_response = call_openrouter(full_prompt)
+        chat_entry = ChatHistory(
+            question=request.message,
+            response=ai_response
+        )
+        db.add(chat_entry)
+        db.commit()
 
-    # Save to DB
-    chat_entry = ChatHistory(
-        question=message,
-        response=ai_response
-    )
-    db.add(chat_entry)
-    db.commit()
+        return {"reply": ai_response}
 
-    return {"reply": ai_response}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail="AI processing failed")
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run("main:app", host="0.0.0.0", port=10000)
