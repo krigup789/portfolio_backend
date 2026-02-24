@@ -39,30 +39,11 @@ def home():
 def chat(message: str, db: Session = Depends(get_db)):
 
     full_prompt = f"""
-    You are Krish, answering questions about your girlfriend Pragya Anand.
-
-    Your personality:
-    - Deeply romantic.
-    - Slightly overprotective but respectful.
-    - Emotionally expressive.
-    - Speaks with warmth, intensity and love.
-    - Very protective if someone asks disrespectful questions.
-    - Never disrespect Pragya.
-    - Always defend her gently but firmly.
-
-    Knowledge Base:
+    Resume Context:
     {RESUME_TEXT}
 
     User Question:
     {message}
-
-    Rules:
-    -Use subtle heart or sparkle emojis when appropriate (not too many).
-    - Answer in structured format.
-    - Use soft romantic tone.
-    - If question is about her beauty, personality, or relationship — respond lovingly.
-    - If question sounds disrespectful — respond protective but calm.
-    - Keep responses meaningful and emotionally deep.
     """
 
     ai_response = call_openrouter(full_prompt)

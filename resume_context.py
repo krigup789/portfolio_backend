@@ -1,60 +1,79 @@
 RESUME_TEXT = """
-Profile Information:
-- DOB: 16 june 2004
-- Name: Pragya Anand
-- Nicknames: Pihuu, My Lovely Sweetheart Pihuu 💖
-- Age: 21 
-- Location: Doon Enclave, IT Park, Sahastradhara, Dehradun
-- Education: MCS in Botany, 1st Year (2nd Semester)
-- Relationship Start Date: 29 August 2025
+Krish Gupta
+Phone: +91 7017828955
+Email: krigup789@gmail.com
+Location: Dehradun, Uttarakhand, India
+GitHub: https://github.com/krigup789
+LinkedIn: https://www.linkedin.com/in/krish-gupta-65bb022b3/
+LeetCode: https://leetcode.com/u/krishguptaofficial01/
 
-Personality:
-- Emotionally intense, deeply sensitive, loving and loyal.
-- An emotionally expressive ambivert with an introverted core.
-- She feels everything deeply — that is both her power and vulnerability.
-- Passionate, caring, overthinking, ambitious, affectionate.
-- Soft-hearted but fiercely loving.
-- Self-aware, deeply attached, and pure-hearted.
-- She understands Krish deeply and feels happiest with him.
+OBJECTIVE
+Aspiring Assistant Software Engineer with strong foundations in C++, Java, OOPS, SQL, and system design.
+Experienced in building high-performance fintech applications and backend-intensive systems handling
+large transaction volumes. Passionate about enterprise-grade software solutions in the Banking and
+Financial Services (BFSI) domain.
 
-Core Emotional Traits:
-- Needs emotional understanding, not fixing.
-- Her intensity comes from caring too much.
-- Loves her family deeply and also Aman.
-- Very attached and deeply emotional.
+EDUCATION
+Graphic Era Hill University, Dehradun
+B.Tech in Computer Science & Engineering (2022 – Present)
+CGPA: 7.54/10
 
-Interests & Preferences:
-- Favorite Food: Fast food and aloo ki sabji.
-- Favorite Drink: KitKat shake.
-- Favorite Color: Pure white.
-- Music: Haryanvi, Garhwali, Punjabi, sometimes Bengali.
-- Movies/Shows: K-dramas and romantic comedies.
-- Hobbies: Writing romantic and emotional poetry (shayari style).
-- Favorite Places: Ladakh, Vrindavan, Rishikesh during Aarti time.
+Shri Guru Ram Rai Public School (CBSE)
+Class 12: 67.6% (2020 – 2022)
+Class 10: 71.5% (2019 – 2020)
 
-Dreams & Goals:
-- Wants to become highly successful.
-- Dreams of earning a lot to make her parents proud.
-- Career Goal: Government job or high salary job.
-- Wants to travel to Ladakh and hill stations.
-- Dreams of building a successful and happy life with Chiku (Krish).
+PROJECTS
 
-Relationship Dynamics:
-- She expresses love through care, fish kisses, remembering small details.
-- Gets upset when Krish talks to other girls.
-- His pain becomes her pain.
-- She becomes happiest when she talks to him and feels loved.
-- She shows affection through emotional closeness and deep attachment.
-- Unique habits: Fish kiss, camel walk, soft smile (mandh mandh muskaan).
+1. FinFold – Investment Tracker & Financial Freedom Planner
+Website: https://finfold.vercel.app/
 
-How She Sees Krish:
-- Caring more than he shows.
-- Thinks more than he says.
-- Feels more than he admits.
-- Protective, romantic, emotionally aware, stubborn, overthinking.
-- Loves her deeply.
+Built a full-stack fintech platform for real-time investment tracking and financial planning
+using Next.js 14, Prisma, Clerk, Recharts, Tailwind, PostgreSQL, and n8n for backend workflows.
 
-Important Emotional Note:
-Pragya is deeply emotional, vulnerable, ambitious, and fiercely loving.
-She values emotional security, loyalty, and mutual success.
+Key Highlights:
+- Designed system to track 8+ asset classes including Stocks, Mutual Funds, FDs,
+  Bank Accounts, Gold, Real Estate, Crypto, and Others.
+- Implemented financial planning tools including SIP, SWP, Wealth, and Future Value calculators.
+- Optimized dashboard queries to handle 10,000+ transactions across 100+ accounts.
+- Implemented JWT-based Clerk authentication with Prisma schema validations.
+- Integrated n8n-based backend workflows for scheduled jobs, background processing,
+  and event-driven automation.
+- Followed enterprise-level design including layered architecture and transaction-safe operations.
+
+2. Source-to-Source Transpiler | Python → C/C++
+Built a compiler-style transpiler converting Python 3.10 code into C++17/C11.
+
+Key Highlights:
+- Covered approximately 85% of core language constructs.
+- Implemented AST and IR-based architecture using CPython AST and ANTLR.
+- Integrated with LLVM for optimized native compilation.
+- Achieved 95% translation correctness across 550+ automated tests.
+- Achieved 2.3× runtime speedup compared to interpreted Python.
+- Improved execution performance by 30–40% using static type inference.
+
+SKILLS
+
+Programming Languages:
+Java, C++ (Proficient), Python, C, SQL
+
+Backend & Web Technologies:
+Java (OOPS), JDBC, Servlets (Basics), Node.js, React.js, Next.js
+
+Automation & Integration:
+n8n (Workflow Orchestration, API Integrations)
+
+Databases:
+PostgreSQL, MongoDB
+
+Core Concepts:
+Data Structures & Algorithms, OOPS, DBMS, Operating Systems, Compiler Design
+
+Soft Skills:
+Analytical Thinking, Problem Solving, Fast Learner, Team Collaboration
+
+CERTIFICATIONS
+- Introduction to Generative AI – Simplilearn (Google Cloud)
+- AI Agents for Beginners – Simplilearn
+- Generative AI Software Development – Simplilearn
+- Prompt Engineering Applications – Simplilearn
 """
